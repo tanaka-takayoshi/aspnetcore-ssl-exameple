@@ -20,6 +20,13 @@ namespace AspNetCoreSslExample
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Loopback, 8080, listenOptions =>
+                    {
+                        listenOptions.UseHttps("certificate.pfx", "password");
+                    });
+                })
                 .Build();
     }
 }
