@@ -11,5 +11,8 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <None Include="certificate.pfx" CopyToPublishDirectory="Always" />
+  </ItemGroup>
 </Project>
