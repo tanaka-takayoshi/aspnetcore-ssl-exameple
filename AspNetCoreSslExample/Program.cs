@@ -25,7 +25,7 @@ namespace AspNetCoreSslExample
                 {
                     options.Listen(IPAddress.Loopback, 8080, listenOptions =>
                     {
-                        listenOptions.UseHttps("certificate.pfx", "password");
+                        listenOptions.UseHttps("certificate.pfx");
                     });
                 })
                 .Build();
